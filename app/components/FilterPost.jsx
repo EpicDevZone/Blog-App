@@ -1,17 +1,20 @@
-import React from 'react'
-import Button from './Button'
+import Button from "./Button";
 
-const FilterPost = () => {
+const filterProp = ["All", "Technology", "Travel", "Lifestyle"];
+
+export default function FilterPost({ activeFilter, onFilterChange }) {
   return (
     <>
-      <div className=' flex justify-around items-center my-3'>
-        <Button text={"All"}/>
-        <Button text={"Tech"}/>
-        <Button text={"Travel"}/>
-        <Button text={"Lifestyle"}/>
+      <div className=" flex justify-around items-center my-3">
+        {filterProp.map((category) => (
+          <Button
+            key={category}
+            category={category}
+            onClick={() => onFilterChange(category)}
+            activeFilter={activeFilter}
+          />
+        ))}
       </div>
     </>
-  )
+  );
 }
-
-export default FilterPost

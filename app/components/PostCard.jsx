@@ -2,16 +2,7 @@ import React from "react";
 import Button from "./Button";
 import Link from "next/link";
 
-const PostCard = ({
-  key,
-  title,
-  author,
-  date,
-  category,
-  content,
-  comments,
-  id,
-}) => {
+const PostCard = ({ title, author, date, category, content, comments, id }) => {
   return (
     <div className=" flex flex-col items-center justify-center border-2 border-white gap-5 px-4 py-3 ">
       <h1 className=" text-3xl font-semibold ">{title}</h1>
@@ -32,3 +23,4 @@ const PostCard = ({
 };
 
 export default PostCard;
+  

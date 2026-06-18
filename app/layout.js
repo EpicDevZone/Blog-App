@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col ">
         <header className=" bg-gray-300 sticky top-0 rounded-2xl ">
           <NavBar />
-          <FilterPost />
+          
         </header>
         <main className=" px-4 ">{children}</main>
       </body>
